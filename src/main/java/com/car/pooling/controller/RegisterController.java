@@ -32,9 +32,9 @@ public class RegisterController {
 		
 	}
 	
-	@GetMapping("/searchCity")
-	public ResponseEntity<?> getCityData(){
-		return null;
+	@GetMapping("/searchCity/{chars}")
+	public ResponseEntity<?> getCityData(@PathVariable("chars") String chars){
+		return this.userRegisterService.getCities(chars);
 	}
 		
 

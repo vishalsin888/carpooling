@@ -13,13 +13,13 @@ $(document).ready(function(){
 $("#location_from").on("keyup", function(){
 	
 	if($("#location_from").val().length == 3 ){
-		searchCityList($("#location_from").val(),"from");
+		searchCityList($("#location_from").val());
 	}
 });
 
 $("#location_to").on("keyup", function(){
 	if($("#location_to").val().length == 3 ){
-		searchCityList($("#location_to").val(),"to");
+		searchCityList($("#location_to").val());
 	}
 });
 
@@ -48,22 +48,18 @@ function searchCabsInBetween(){
 	});
 }
 
-function searchCityList(cityChars , processType){
-	
-	var cityData = {};
-	cityData["cityChars"] = cityChars;
-	cityData["processType"] = processType;
-	
+function searchCityList(cityChars){
+	alert(cityChars);
 	$.ajax({
 		
 		type : 'GET',
-		url : '/searchCity',
+		url : '/searchCity/'+cityChars,
 		contentType: "application/json",
-		data : JSON.stringify(cityData),
 		dataType: 'json',
         cache: false,
-		success : function(){
+		success : function(responseJson){
 			alert('success');
+			console.log(responseJson);
 			//$("#user_reg_form").empty();
 			//document.location.reload();
 		},

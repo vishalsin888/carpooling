@@ -1,5 +1,6 @@
 package com.car.pooling.service;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 
@@ -12,6 +13,6 @@ public interface UserRegisterService{
 	
 	public ResponseEntity<RegisterUser> login(String username, String password);
 	
-	public ArrayList<CityBean> getCities(CityBean cityBean);
+	public ResponseEntity<List<CityBean>> getCities(String chars);
 	
 }
