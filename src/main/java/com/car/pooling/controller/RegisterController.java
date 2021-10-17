@@ -36,6 +36,11 @@ public class RegisterController {
 	public ResponseEntity<?> getCityData(@PathVariable("chars") String chars){
 		return this.userRegisterService.getCities(chars);
 	}
+	
+	@GetMapping("/searchCabs")
+	public ResponseEntity<?> getCabsData(@RequestParam("from") String from, @RequestParam("to") String to){
+		return this.userRegisterService.getCabs(from, to);
+	}
 		
 
 }

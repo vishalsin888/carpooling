@@ -17,6 +17,9 @@
 												<i class="fas fa-plane-departure" style="color: #5e066e;"></i> Select Source
 											</h5>
 											<input type="text" id="location_from" style="width: 80%;">
+											<select class="form-select" aria-label="Default select example" style="display: none;width: 80%;" id="cab_from">
+											
+											</select>
 										</div>
 										<div class="col-md-4 mr-auto">
 
@@ -24,6 +27,9 @@
 												<i class="fas fa-plane-arrival" style="color: #5e066e;"></i> Choose Destination
 											</h5>
 											<input type="text" id="location_to" style="width: 80%;">
+											<select class="form-select" aria-label="Default select example" style="display: none;width: 80%;" id="cab_to">
+											
+											</select>
 										</div>
 									</div>
 								</div>
