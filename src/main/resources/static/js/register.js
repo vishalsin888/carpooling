@@ -30,7 +30,7 @@ function submitRegisterForm(){
 		success : function(){
 			//alert('success');
 			//$("#user_reg_form").empty();
-			document.location.reload();
+			window.location.href = "/login";
 		},
 		error : function (){
 			alert('error');

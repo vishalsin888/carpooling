@@ -58,14 +58,24 @@ public class UserRegisterServiceImpl implements UserRegisterService{
 
 	//getCabs list using procs
 	@Override
-	public ResponseEntity<List<CabsBean>> getCabs(String from, String to) {
+	public ResponseEntity<List<CabsBean>> getCabs(String from, String to,String from_lattitude,String from_longitude, String to_lattitude, String to_longitude) {
 		
 		String dbName = env.getProperty("spring.jpa.properties.hibernate.default_schema");
 		StoredProcedureQuery query = this.entityManager.createStoredProcedureQuery(dbName + CABS_PROC);
         query.registerStoredProcedureParameter("p_from", String.class, ParameterMode.IN);
         query.registerStoredProcedureParameter("p_to", String.class, ParameterMode.IN);
+        query.registerStoredProcedureParameter("p_from_lattitude", String.class, ParameterMode.IN);
+        query.registerStoredProcedureParameter("p_from_longitude", String.class, ParameterMode.IN);
+        query.registerStoredProcedureParameter("p_to_lattitude", String.class, ParameterMode.IN);
+        query.registerStoredProcedureParameter("p_to_longitude", String.class, ParameterMode.IN);
+        
         query.setParameter("p_from", from);
         query.setParameter("p_to", to);
+        query.setParameter("p_from_lattitude", from_lattitude);
+        query.setParameter("p_from_longitude", from_longitude);
+        query.setParameter("p_to_lattitude", to_lattitude);
+        query.setParameter("p_to_longitude", to_longitude);
+        
 		return ResponseEntity.ok(query.getResultList());
 		
 	}

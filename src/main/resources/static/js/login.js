@@ -10,20 +10,22 @@ $(document).ready(function(){
 });
 
 function submitLoginForm(){
-	var loginData = {};
-	loginData["useremail"] = $("#loginemail").val().trim();
-	loginData["userpassword"] = $("#loginpassword").val().trim();
-	console.log(loginData);
 	$.ajax({
 		
 		type : 'GET',
 		url : '/userlogin',
 		contentType: "application/json",
-		data : JSON.stringify(loginData),
+		data : {
+			useremail : $("#loginemail").val().trim(),
+			userpassword : $("#loginpassword").val().trim()
+		},
 		dataType: 'json',
         cache: false,
 		success : function(){
-			alert('loggedIn');
+			
+			$("#loginStatus").val("LoggedIn");
+			window.location.href = "/dashboard";
+			
 		},
 		error : function (){
 			alert('error');

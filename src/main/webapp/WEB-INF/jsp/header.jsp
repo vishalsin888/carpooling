@@ -39,9 +39,19 @@
 				    color: white;
 				    background: url(https://media.istockphoto.com/vectors/front-view-of-a-taxi-cab-a-driver-and-a-passenger-on-a-front-seat-a-vector-id1297272898?b=1&k=20&m=1297272898&s=170667a&w=0&h=aSbJ5paKnVgeDV3EyJt0t13xPPggWImBwKcCZWpVCr4=);
 			}
+			.cabs_header{
+			 		height: 35vh;
+				    width: 100%;
+				    top: 100px;
+				    color: white;
+				    background: linear-gradient(to right, rgba(34, 57, 187, 0.9), rgba(170, 97, 97, 0.5)),
+			         	url(https://media.istockphoto.com/vectors/online-map-navigation-for-car-at-large-tablet-vector-illustration-vector-id1253841604?b=1&k=20&m=1253841604&s=612x612&w=0&h=FZKLuDJViKAKeia77WF1ZaEAOFtIRyFf3tXiNNl9AFA=);
+			}
+			
         </style>
 </head>
 <body>
+<input type="hidden" id="loginStatus" value="">
 <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style="z-index: 9;">
         <div class="container-fluid">
           <a class="nav-link navbar-brand ml-5 home_pg" href="/" >
@@ -62,15 +72,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto header_links px-5">
               <li class="nav-item active">
-                <a class="nav-link" style="font-weight: bold;" href="/">Home</a>
+                <a class="nav-link mr-2" style="font-weight: bold;" href="/">Home</a>
               </li>
               <!-- <li class="nav-item active">
                 <a class="nav-link" href="#aboutus">About Us</a>
               </li> -->
                <li class="nav-item active">
-                <a class="nav-link" style="font-weight: bold;" href="/login">Log In</a>
+                <a class="nav-link mr-2" style="font-weight: bold;" href="/login">Log In</a>
               </li>
-               <li class="nav-item active">
+               <li class="nav-item active mr-2">
                 <a class="nav-link" style="font-weight: bold;" href="/signup">Sign Up</a>
               </li>
            </ul>

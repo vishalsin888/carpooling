@@ -23,6 +23,16 @@ public class CarPoolingController {
 		return "signup";
 	}
 	
+	@RequestMapping(value = "/dashboard")
+	public String afterLogin(ModelMap model) {
+		return "users-dashboard";
+	}
+	
+	/*
+	 * @RequestMapping(value = "/getcabs", method = RequestMethod.GET) public String
+	 * showCabs(ModelMap model) { return "allcabs"; }
+	 */
+	
 	
 	
 }

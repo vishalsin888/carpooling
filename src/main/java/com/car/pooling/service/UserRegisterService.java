@@ -15,6 +15,6 @@ public interface UserRegisterService{
 	
 	public ResponseEntity<List<CityBean>> getCities(String chars);
 	
-	public ResponseEntity<List<CabsBean>> getCabs(String from, String to);
+	public ResponseEntity<List<CabsBean>> getCabs(String from, String to,String from_lattitude,String from_longitude, String to_lattitude, String to_longitude);
 	
 }

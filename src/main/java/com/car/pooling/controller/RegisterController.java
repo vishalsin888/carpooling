@@ -26,10 +26,12 @@ public class RegisterController {
 	}
 	
 	@GetMapping("/userlogin")
-	public ResponseEntity<?> loginUser(@RequestParam("useremail") String useremail, @RequestParam("userpassword") String userpassword){
-		System.out.println(useremail +" -- "+userpassword);
-		return this.userRegisterService.login(useremail,userpassword);
-		
+	public ResponseEntity<?> loginUser(
+			@RequestParam("useremail") String useremail,
+			@RequestParam("userpassword") String userpassword
+			){
+				System.out.println(useremail +" -- "+userpassword);
+				return this.userRegisterService.login(useremail,userpassword);
 	}
 	
 	@GetMapping("/searchCity/{chars}")
@@ -38,8 +40,15 @@ public class RegisterController {
 	}
 	
 	@GetMapping("/searchCabs")
-	public ResponseEntity<?> getCabsData(@RequestParam("from") String from, @RequestParam("to") String to){
-		return this.userRegisterService.getCabs(from, to);
+	public ResponseEntity<?> getCabsData(
+			@RequestParam("from") String from, 
+			@RequestParam("to") String to,
+			@RequestParam("from_lattitude") String from_lattitude, 
+			@RequestParam("from_longitude") String from_longitude, 
+			@RequestParam("to_lattitude") String to_lattitude,
+			@RequestParam("to_longitude") String to_longitude
+			){
+		return this.userRegisterService.getCabs(from, to, from_lattitude, from_longitude,to_lattitude, to_longitude);
 	}
 		
 
