@@ -1,6 +1,6 @@
 <%@include file="header.jsp"%>
 
-<div class="bootstrap-wrapper" style="padding-top: 5%;padding-bottom: 5%">
+<div class="bootstrap-wrapper" style="padding-top: 5%;">
 	<div class="header" id="home_page">
 		<div class="container-fluid" style="height: 80vh;">
 			<div class="row align-items-center">
@@ -49,7 +49,7 @@
 		</div>
 	</div>
 </div>
-<div class="bootstrap-wrapper" style="display: none;padding-bottom: 5%;" id="cab_results">
+<div class="bootstrap-wrapper" style="display: none;padding:5% 0%;" id="cab_results">
 	<div class="container text-center" style="background: linear-gradient( to top , #5172657a 0% , #64555633 100%);">
 		<div class="row">
 			<div class="col-md-10">
@@ -73,11 +73,11 @@
 		</div>
 	</div>
 </div>
-<div class="bootstrap-wrapper" style="display: none;padding-bottom: 5%;" id="cab_no_results">
+<div class="bootstrap-wrapper" style="display: none;padding:5% 0%;" id="cab_no_results">
 	<div class="container text-center">
 		<div class="row">
 			<div class="col-md-10">
-				<h3>No Cabs Found !!</h3>
+				<h3><i style="font-size: 2.3rem;font-weight: bold;" class="fas fa-car-crash"></i> No Cabs Found !!</h3>
 			</div>
 		</div>
 	</div>
@@ -103,8 +103,8 @@
                   dolor autem fuga nulla explicabo fugit id adipisci aliquam minima dicta 
                   tenetur facere ipsa nihil, nobis eaque tempora placeat cupiditate totam.
               </p>
-              <i class="fa fa-phone text-warning conts"></i>
-              <i class="fa fa-heart text-danger conts"></i>
+              <i class="fa fa-phone text-warning conts mr-3" style="font-size: 1.5rem;"></i>
+              <i class="fa fa-heart text-danger conts" style="font-size: 1.5rem;"></i>
               <p>+91-8180026269</p>
               <p>www.quickxpertinfotech.com</p>
           </div>

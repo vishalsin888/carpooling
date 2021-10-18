@@ -15,11 +15,26 @@ $("#location_from").on("keyup", function(){
 	if($("#location_from").val().length == 3 ){
 		searchCityList($("#location_from").val(), "from");
 	}
+	
+	if($("#location_from").val().length < 3 ){
+		$("#cab_from").html("");
+		$("#cab_from").siblings("#from_lattitude").val("");
+		$("#cab_from").siblings("#from_longitude").val("");
+		$("#cab_from").hide();
+	}
+	
 });
 
 $("#location_to").on("keyup", function(){
 	if($("#location_to").val().length == 3 ){
 		searchCityList($("#location_to").val(), "to");
+	}
+	
+	if($("#location_to").val().length < 3 ){
+		$("#cab_to").html("");
+		$("#cab_to").siblings("#to_lattitude").val("");
+		$("#cab_to").siblings("#to_longitude").val("");
+		$("#cab_to").hide();
 	}
 });
 

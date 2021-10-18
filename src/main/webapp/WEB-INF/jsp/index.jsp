@@ -5,7 +5,7 @@
 		<div class="container-fluid" style="height: 80vh;">
 			<div class="row align-items-center">
 				<div class="col-md-12 text-center my-5 py-5">
-					<h2 class="py-5">Welcome To CarPooling</h2>
+					 <h2 class="py-5"><img width="50" height="50" alt="" src="https://cdn.pixabay.com/photo/2020/08/22/09/57/carpool-5508006_960_720.png"> CarPooling</h2>
 					<section class="message py-5" id="aboutus">
 					        <div class="container text-center">
 					            <h1>We Have Got What You Need</h1>
