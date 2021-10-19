@@ -31,6 +31,7 @@ function submitRegisterForm(){
 			//alert('success');
 			//$("#user_reg_form").empty();
 			window.location.href = "/login";
+			document.location.reload();
 		},
 		error : function (){
 			alert('error');

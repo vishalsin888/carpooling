@@ -22,14 +22,12 @@ function submitLoginForm(){
 		dataType: 'json',
         cache: false,
 		success : function(){
-			
-			$("#loginStatus").val("LoggedIn");
+		
 			window.location.href = "/dashboard";
-			
 		},
 		error : function (){
 			alert('error');
-			//document.location.reload();
+			document.location.reload();
 		}
 	});
 }

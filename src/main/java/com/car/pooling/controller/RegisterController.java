@@ -2,11 +2,11 @@ package com.car.pooling.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,19 +20,20 @@ public class RegisterController {
 	private UserRegisterService userRegisterService;
 	
 	@PostMapping("/createuser")
-	public RegisterUser createUserAcc(@RequestBody RegisterUser user) {
-		System.out.println("in create");
+	public RegisterUser createUserAcc(@RequestBody RegisterUser user,ModelMap model) {
+		model.addAttribute("LoggedIn", "NotLoggedIn");
 		return this.userRegisterService.createUser(user);
 	}
 	
 	@GetMapping("/userlogin")
 	public ResponseEntity<?> loginUser(
 			@RequestParam("useremail") String useremail,
-			@RequestParam("userpassword") String userpassword
+			@RequestParam("userpassword") String userpassword, ModelMap model
 			){
-				System.out.println(useremail +" -- "+userpassword);
+				model.addAttribute("LoggedIn", "LoggedIn");
 				return this.userRegisterService.login(useremail,userpassword);
 	}
+	
 	
 	@GetMapping("/searchCity/{chars}")
 	public ResponseEntity<?> getCityData(@PathVariable("chars") String chars){
